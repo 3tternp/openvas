@@ -6,15 +6,15 @@
 
 2. change path to directory 
 
-**cd openvas **
+     cd openvas 
 
 3. change execution permission to the file as 
 
-**chmod +x openvas.sh **
+    chmod +x openvas.sh 
 
 4. now run the file as 
 
-**sudo ./openvas.sh **
+   sudo ./openvas.sh
 
 if you have multiple version of postgresql then you will get below error for testing i have postgresql 14 and 15 in my system so i got an error as 
 
