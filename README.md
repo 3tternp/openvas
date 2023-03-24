@@ -2,7 +2,7 @@
 
 1. Open terminal and clone the repo to your system 
 
-**git clone https://github.com/3tternp/openvas**
+    **git clone https://github.com/3tternp/openvas**
 
 2. change path to directory 
 
