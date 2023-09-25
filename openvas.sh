@@ -1,24 +1,4 @@
 #!/bin/bash
-# Get the path to the current working directory
-WORKING_DIR=$(pwd)
-
-# Get the name of the background image file
-IMAGE_FILE=$(ls "${WORKING_DIR}" | grep -E '.*\.(png|gif|jpg|jpeg)$')
-
-# If there is no background image file in the working directory, exit the script
-if [[ -z "${IMAGE_FILE}" ]]; then
-  echo "No background image file found in the working directory."
-  exit 1
-fi
-
-# Set the path to the background image file
-IMAGE_PATH="${WORKING_DIR}/${IMAGE_FILE}"
-
-# Get the terminal profile name
-PROFILE_NAME=$(gnome-terminal --get-profile)
-
-# Set the background image for the terminal profile
-gsettings set org.gnome.Terminal.Profiles.${PROFILE_NAME} background-image-file "${IMAGE_PATH}"
 
 while true ;
 do
@@ -44,6 +24,7 @@ gvm-feed-update
 exit
 else 
 echo "you are out of the box"
+exit
 
 fi
 done 
