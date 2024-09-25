@@ -10,7 +10,9 @@ while true; do
   echo -e "\033[32m"
   echo -e "2. Update Feeds"
   echo -e "\033[33m"
-  echo -e "3. Exit"
+  echo -e "3. Fix Your GVM-XX.XX installation is not yet complete"
+  echo -e "\033[33m"
+  echo -e "4. Exit"
   echo -e "\033[39m"
 
   read count
@@ -27,7 +29,16 @@ while true; do
     # Update GVM feeds
     sudo greenbone-feed-sync
 
-  elif [ "$count" -eq 3 ]; then
+    elif [ "$count" -eq 3 ]; then
+    # Fix Your GVM-XX.XX installation is not yet complete
+    sudo -u postgres psql
+ALTER DATABASE template1 REFRESH COLLATION VERSION;
+\q
+exit
+sudo -u postgres /usr/share/gvm/create-postgresql-database
+
+    
+  elif [ "$count" -eq 4 ]; then
     # Exit the script
     exit 0
 
