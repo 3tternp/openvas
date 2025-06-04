@@ -44,9 +44,9 @@ and restart the postgresql server using following command
 **database "postgres" has a collation version mismatch**
 
 if you see the above error run following command and inside postgres database run below command accordingly 
-
+```
 sudo -u postgres psql
-
+```
 WARNING:  database "postgres" has a collation version mismatch
 
 DETAIL:  The database was created using collation version 2.40, but the operating system provides version 2.41.
